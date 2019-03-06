@@ -1,0 +1,74 @@
+{
+  "name": "xnpm",
+  "version": "6.0.0",
+  "description": "xnpm: npm client for http://xnpm.repo.xunlei.cn/",
+  "main": "bin/xnpm",
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "lint": "eslint bin lib test/*.js",
+    "ci": "npm run lint && npm run test",
+    "autod": "autod"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "xnpm": "bin/xnpm"
+  },
+  "dependencies": {
+    "auto-correct": "^1.0.0",
+    "bagpipe": "^0.3.5",
+    "colors": "^1.1.2",
+    "commander": "~2.10.0",
+    "cross-spawn": "~0.2.8",
+    "debug": "^2.2.0",
+    "giturl": "^1.0.0",
+    "ini": "^1.3.4",
+    "npm": "^6.1.0",
+    "npm-request": "^1.0.0",
+    "npminstall": "^3.0.0",
+    "open": "^0.0.5",
+    "urllib": "^2.17.0"
+  },
+  "devDependencies": {
+    "autod": "^2.7.1",
+    "coffee": "^3.3.0",
+    "egg-bin": "^4.7.0",
+    "egg-ci": "^1.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-egg": "^7.0.0",
+    "fs-extra": "0",
+    "rimraf": "^2.5.4"
+  },
+  "homepage": "https://github.com/xnpm/xnpm",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xnpm/xnpm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xnpm/xnpm/issues"
+  },
+  "keywords": [
+    "xnpm",
+    "npm",
+    "npminstall"
+  ],
+  "publishConfig": {
+    "tag": "latest-6"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "ci": {
+    "version": "6, 8, 10",
+    "command": {
+      "travis": "ci",
+      "appveyor": "ci"
+    }
+  },
+  "author": "sternelee <sternelee@gmail.com> (https://sternelee.com)",
+  "license": "MIT"
+}
